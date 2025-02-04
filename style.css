@@ -1,0 +1,222 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(135deg, #3a0ca3, #7209b7);
+    color: #fff;
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+  
+  /* DECORAÇÃO - GIF DO GENGAR */
+  #gengar-decoration {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 40px; /* Ainda menor */
+    opacity: 0.8;
+    pointer-events: none;
+    animation: dance 2s ease-in-out infinite;
+  }
+  @keyframes dance {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* HEADER */
+  header {
+    padding: 20px 0 40px;
+    text-align: center;
+    position: relative;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  #site-title, #info-title {
+    font-size: 2.5rem;
+    /* O nome do site permanece fixo em todas as línguas */
+  }
+  .language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .language-selector select {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  /* CONTAINER DE BUSCA */
+  .search-container {
+    margin-top: 20px;
+  }
+  header input[type="text"] {
+    padding: 10px;
+    width: 90%;
+    max-width: 400px;
+    border: 2px solid #f72585;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  header input[type="text"]:focus {
+    border-color: #b5179e;
+  }
+  
+  /* POKEDEX - GRID DOS CARDS */
+  .pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+  }
+  
+  /* CARTÃO DO POKÉMON */
+  .pokemon-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  .pokemon-card img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  .pokemon-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #f72585;
+  }
+  .pokemon-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  
+  /* TIPOS DO POKÉMON */
+  .types-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s;
+  }
+  .type {
+    background-color: #ddd;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  /* EFEITO HOVER: esconder tipos e mostrar botão Info */
+  .pokemon-card:hover .types-container {
+    visibility: hidden;
+  }
+  .pokemon-card:hover .info-btn {
+    visibility: visible;
+  }
+  
+  /* BOTÃO INFO */
+  .info-btn {
+    visibility: hidden;
+    background: #f72585;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .info-btn:hover {
+    background: #b5179e;
+  }
+  
+  /* BOTÃO CARREGAR MAIS */
+  .load-more {
+    display: block;
+    margin: 0 auto 40px;
+    padding: 10px 20px;
+    background: #f72585;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  .load-more:hover {
+    background: #b5179e;
+  }
+  
+  /* PÁGINA DE DETALHES */
+  .pokemon-info {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .pokemon-info img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .pokemon-detail {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  .pokemon-evolutions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  .pokemon-evolutions img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+  .evolution-arrow {
+    font-size: 2rem;
+    margin: 0 10px;
+  }
+  
+  /* BOTÃO VOLTAR */
+  .back-button {
+    background: #f72585;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  .back-button:hover {
+    background: #b5179e;
+  }
+  

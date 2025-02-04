@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes do Pokémon</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1 id="info-title">Detalhes do Pokémon</h1>
+      <div class="language-selector">
+        <select id="languages-info" onchange="changeLanguageInfo()">
+          <option value="pt">Português</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+    </div>
+    <button class="back-button" onclick="window.history.back()">Voltar</button>
+  </header>
+
+  <main>
+    <section id="pokemon-info" class="pokemon-info">
+      <!-- Os detalhes do Pokémon serão carregados dinamicamente -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
